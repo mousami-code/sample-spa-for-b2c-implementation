@@ -1,0 +1,460 @@
+/* General Styles */
+* {
+    margin: 10;
+    padding: 5;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #0077b6, #00a8e8); /* Ocean blue gradient */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start; /* Start positioning from the top */
+    align-items: center; /* Center content horizontally */
+    margin: 0; /* Remove default body margin */
+    padding-top: 20vh; /* Push content down a little bit from the top */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #005f8b; /* Darker shade of ocean blue */
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navLinks li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.navLinks li a:hover {
+    color: #ffcc00; /* Highlight color */
+}
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    margin-top: 100px; /* Prevent content from hiding behind navbar */
+    padding: 40px 20px;
+}
+
+/* Hero Section */
+.hero-text {
+    background: rgba(255, 255, 255, 0.1); /* Light transparent box */
+    padding: 50px;
+    border-radius: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #ffcc00;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background: #ffaa00;
+}
+
+/* Highlights Section */
+.highlights {
+    margin-top: 50px;
+}
+
+.highlights h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.highlight-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.highlight-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.highlight-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Subscription Plans */
+.plans {
+    margin-top: 50px;
+}
+
+.plans h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    background-color: #003f5c;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; /* Keeps footer at bottom */
+}
+
+
+/* Subscription Container */
+.subscription-container {
+    min-height: 100vh;  /* Ensures it covers the full viewport height */
+    width: 100%;        /* Ensures it spans the full width */
+    padding: 40px 20px;
+    background-color:oceanblue;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.subscription-container h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    margin-top: 50px;  /* Added margin-top to move it a little lower */
+    margin-bottom: 40px;
+}
+
+
+/* Subscriptions Grid */
+.subscriptions {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Subscription Card */
+.subscription {
+    background-color: #0077b6;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 300px;
+    height: 450px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.subscription:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Subscription Heading */
+.subscription h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Subscription Price */
+.price {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: hsla(0, 0%, 100%, 0.995);
+}
+
+/* Subscription Features */
+.subscription ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.subscription ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Button */
+.subscription button {
+    background-color: hsla(21, 100%, 50%, 0.995);
+    color: #f9f9f9;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.subscription button:hover {
+    background-color: #ffb700;
+}
+
+/* Premium Plan */
+.subscription.premium {
+    background-color: #0077b6
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Centering the Cart */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:#f5f5f5;  /* Deep Ocean Blue Background */
+    margin: 0;
+}
+
+/* Cart Container */
+.cart-container {
+    max-width: 500px;
+    background-color: #0077b6;  /* Ocean Blue */
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+.cart-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Cart Items */
+.cart-item {
+    background-color: white;
+    color: #0077b6;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Item Heading */
+.cart-item h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* Item Price */
+.cart-item .price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Remove Button */
+.remove-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.remove-btn:hover {
+    background-color: #e60000;
+}
+
+/* Total Price */
+.cart-total {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Checkout Button */
+.checkout-btn {
+    background-color: #ffcc00;
+    color: #005f99;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #ffb700;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .cart-container {
+        width: 90%;
+    }
+}
+
+/* Apply Ocean Blue Background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #0077b6, #0096c7);
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Checkout Container */
+.checkout-container {
+    width: 400px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title */
+.checkout-container h1 {
+    color: #0077b6;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #005f99;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #0077b6;
+    outline: none;
+}
+
+/* Two-Column Layout for Expiry & CVV */
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-group.half {
+    flex: 1;
+}
+
+/* Checkout Button */
+.checkout-btn {
+    width: 100%;
+    background-color: #ffcc00;
+    color: #005f99;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.checkout-btn:hover {
+    background-color: #ffb700;
+    transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .checkout-container {
+        width: 90%;
+    }
+}
+
